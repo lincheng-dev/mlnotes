@@ -165,3 +165,76 @@ test.on_submit(handle_submit)
 # push file: git push origin master
 # 
 # setup ssh key: ssh-keygen -t rsa -b 4096 -C "lincheng-dev@github.com"
+
+# In[3]:
+
+
+get_ipython().run_line_magic('matplotlib', 'inline')
+
+
+# In[4]:
+
+
+import matplotlib
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+# In[5]:
+
+
+x = np.linspace(0,5,10)
+y = x**2
+
+
+# In[9]:
+
+
+plt.figure()
+plt.plot(x, y, 'r--')
+plt.xlabel('x')
+plt.ylabel('y')
+plt.title('title')
+plt.show()
+
+
+# In[12]:
+
+
+figs, axes = plt.subplots(nrows=1, ncols=2)
+for ax in axes:
+    ax.plot(x, y, 'r')
+    ax.set_xlabel('x')
+    ax.set_ylabel('y')
+    ax.set_title('title')
+    
+figs.tight_layout()
+
+
+# In[17]:
+
+
+figs, axes = plt.subplots()
+axes.plot(x, x**2, label = "y=x**2")
+axes.plot(x, x**3, label = "y=x**3")
+axes.legend(loc=2);
+axes.set_xlabel(r'x$\alpha$')
+axes.set_ylabel('y')
+axes.set_title('title');
+
+
+# setup global fonts
+# 
+# matplotlib.rcParams.update({'font.size': 18, 'font.family': 'STIXGeneral', 'mathtext.fontset': 'stix'})
+# 
+# matplotlib.rcParams.update({'font.size': 18, 'text.usetex': True})
+# 
+# matplotlib.rcParams.update({'font.size': 12, 'font.family': 'sans', 'text.usetex': False})
+
+# In[26]:
+
+
+from mpl_toolkits.mplot3d.axes3d import Axes3D
+
+
+# more details in https://nbviewer.jupyter.org/github/jrjohansson/scientific-python-lectures/blob/master/Lecture-4-Matplotlib.ipynb
