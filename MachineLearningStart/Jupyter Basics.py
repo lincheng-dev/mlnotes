@@ -147,3 +147,21 @@ test.on_submit(handle_submit)
 #     check_call(['jupyter', 'nbconvert', '--to', 'html', fname], cwd=d)
 #     
 # c.FileContentsManager.post_save_hook = post_save
+
+# 7 Git command
+
+# add remote url: git remote add origin git@github.com:lincheng-dev/mlnotes.git
+# 
+# change remote url: git remote set-url git@github.com:lincheng-dev/mlnotes.git
+# 
+# create new branch: git checkout -b master
+# 
+# checkout remote: git pull origin master
+# 
+# add files: git add *
+# 
+# commit file: git commite -m "the messages"
+# 
+# push file: git push origin master
+# 
+# setup ssh key: ssh-keygen -t rsa -b 4096 -C "lincheng-dev@github.com"
